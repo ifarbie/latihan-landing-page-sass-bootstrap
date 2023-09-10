@@ -43,7 +43,7 @@ body {
         z-index: -999;
         @media screen and (max-width: 992px) {
             opacity: 0.5;
-            background-size: 80vmax;
+            background-size: 60vmax;
         }
     }
 }
@@ -136,8 +136,23 @@ body {
 
     // RESPONSIVE
     @media screen and (max-width: 992px) {
-        margin-top: 4.5em;
+        margin-top: 8em;
         text-align: center;
         text-shadow: 1px 1px 2px rgba($color: $textColor, $alpha: 0.7);
+        
+        h2 {
+            font-size: 3rem;
+            white-space: inherit;
+        }
+        
+        h3 {
+            font-size: 2rem;
+            white-space: inherit;
+        }
+
+        p {
+            margin-bottom: 2em;
+            font-size: 1rem;
+        }
     }
 }
