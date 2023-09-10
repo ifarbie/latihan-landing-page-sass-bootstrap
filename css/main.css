@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+body::before {
+  content: "";
+  background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 46rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  z-index: -999;
+}
+@media screen and (max-width: 992px) {
+  body::before {
+    opacity: 0.5;
+    background-size: 80vmax;
+  }
+}
+
+.container {
+  margin-top: 2.8rem;
+}
+
+.custom-nav .navbar-brand img {
+  height: 50px;
+  width: 50px;
+  margin-top: -10px;
+}
+@media screen and (max-width: 1200px) {
+  .custom-nav .navbar-brand img {
+    height: 40px;
+    width: 40px;
+  }
+}
+.custom-nav .navbar-brand span {
+  color: #fa6c94;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-left: 0.3em;
+}
+@media screen and (max-width: 1200px) {
+  .custom-nav .navbar-brand span {
+    font-size: 1.3rem;
+  }
+}
+.custom-nav #navbarNav .navbar-nav .nav-item a {
+  font-size: 0.9rem;
+  color: #fa6c94;
+  font-weight: 600;
+  margin-left: 2em;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+}
+.custom-nav #navbarNav .navbar-nav .nav-item a:hover {
+  color: #95052e;
+}
+.custom-nav #navbarNav .navbar-nav .nav-item .sign-up-btn {
+  display: inline-block;
+  color: white;
+  background-color: #fa6c94;
+  border: 1px solid transparent;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  transition: 0.1s ease;
+}
+.custom-nav #navbarNav .navbar-nav .nav-item .sign-up-btn:hover {
+  color: #fa6c94;
+  border: 1px solid #fa6c94;
+  background-color: transparent;
+}
+@media screen and (max-width: 992px) {
+  .custom-nav {
+    margin-top: -1.5em;
+  }
+}
+
+.custom-section {
+  margin-top: 6em;
+  text-transform: uppercase;
+}
+.custom-section h2 {
+  color: #fa6c94;
+  font-size: 4.1rem;
+  font-weight: 700;
+  white-space: nowrap;
+  line-height: 0.8;
+}
+.custom-section h3 {
+  color: #b2c7f6;
+  font-size: 2.7rem;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+  white-space: nowrap;
+}
+.custom-section p {
+  font-size: 1.1rem;
+  text-transform: initial;
+  margin-bottom: 0.8em;
+}
+.custom-section a {
+  display: inline-block;
+  color: white;
+  background-color: #fa6c94;
+  border: 1px solid transparent;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  transition: 0.1s ease;
+}
+.custom-section a:hover {
+  color: #fa6c94;
+  border: 1px solid #fa6c94;
+  background-color: transparent;
+}
+@media screen and (max-width: 992px) {
+  .custom-section {
+    margin-top: 4.5em;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(70, 71, 76, 0.7);
+  }
+}/*# sourceMappingURL=main.css.map */

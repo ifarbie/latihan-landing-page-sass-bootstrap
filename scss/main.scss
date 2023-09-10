@@ -1,0 +1,143 @@
+// FONT
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700&display=swap");
+
+// VARIABLES
+$primaryColor: #fa6c94;
+$secondaryColor: #b2c7f6;
+$tertiaryColor: #c2a6fa;
+$textColor: #46474c;
+$fonts: "Montserrat", sans-serif;
+
+// MIXIN
+@mixin button {
+    display: inline-block;
+    color: white;
+    background-color: $primaryColor;
+    border: 1px solid transparent;
+    border-radius: 2em;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    transition: 0.1s ease;
+    &:hover {
+        color: $primaryColor;
+        border: 1px solid $primaryColor;
+        background-color: transparent;
+    }
+}
+
+// STYLES
+body {
+    font-family: $fonts;
+    &::before {
+        content: "";
+        background-image: url(../img/bg.png);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 46rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        opacity: 0.9;
+        z-index: -999;
+        @media screen and (max-width: 992px) {
+            opacity: 0.5;
+            background-size: 80vmax;
+        }
+    }
+}
+
+.container {
+    margin-top: 2.8rem;
+}
+
+// STYLES NAVIGATION / NAVBAR
+.custom-nav {
+    .navbar-brand {
+        img {
+            height: 50px;
+            width: 50px;
+            margin-top: -10px;
+            @media screen and (max-width: 1200px) {
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+        span {
+            color: $primaryColor;
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-left: 0.3em;
+            @media screen and (max-width: 1200px) {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    #navbarNav {
+        .navbar-nav {
+            .nav-item {
+                a {
+                    font-size: 0.9rem;
+                    color: $primaryColor;
+                    font-weight: 600;
+                    margin-left: 2em;
+                    text-transform: uppercase;
+                    transition: 0.1s ease;
+                    &:hover {
+                        color: darken($color: $primaryColor, $amount: 40%);
+                    }
+                }
+
+                .sign-up-btn {
+                    @include button();
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        margin-top: -1.5em;
+    }
+}
+
+// CONTENT
+.custom-section {
+    margin-top: 6em;
+    text-transform: uppercase;
+
+    h2 {
+        color: $primaryColor;
+        font-size: 4.1rem;
+        font-weight: 700;
+        white-space: nowrap;
+        line-height: 0.8;
+    }
+
+    h3 {
+        color: $secondaryColor;
+        font-size: 2.7rem;
+        font-weight: 600;
+        margin-bottom: 0.8em;
+        white-space: nowrap;
+    }
+
+    p {
+        font-size: 1.1rem;
+        text-transform: initial;
+        margin-bottom: 0.8em;
+    }
+
+    a {
+        @include button();
+    }
+
+    // RESPONSIVE
+    @media screen and (max-width: 992px) {
+        margin-top: 4.5em;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba($color: $textColor, $alpha: 0.7);
+    }
+}
